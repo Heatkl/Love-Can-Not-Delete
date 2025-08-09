@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Codice.Client.Commands;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace VNCreator
     public class DisplayBase : MonoBehaviour
     {
         public StoryObject story;
+        public int choicesCount;
 
         protected NodeData currentNode;
         protected bool lastNode;
@@ -35,6 +37,7 @@ namespace VNCreator
                     currentNode = story.GetCurrentNode(loadList[loadList.Count - 1]);
                 }
             }
+            choicesCount = story.nodes.Count(n => n.choices > 1);
         }
 
         protected virtual void NextNode(int _choiceId)
@@ -44,6 +47,7 @@ namespace VNCreator
                 currentNode = story.GetNextNode(currentNode.guid, _choiceId);
                 lastNode = currentNode.endNode;
                 loadList.Add(currentNode.guid);
+                
             }
         }
 

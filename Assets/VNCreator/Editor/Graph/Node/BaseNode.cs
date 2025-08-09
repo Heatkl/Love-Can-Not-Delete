@@ -105,6 +105,7 @@ namespace VNCreator
                     backSprDisplay.style.backgroundImage = node.nodeData.backgroundSpr ? node.nodeData.backgroundSpr.texture : null;
                 }
             );
+
         }
     }
 #endif

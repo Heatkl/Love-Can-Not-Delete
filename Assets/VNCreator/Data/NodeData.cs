@@ -17,8 +17,11 @@ namespace VNCreator
         public int choices = 1;
         public List<string> choiceOptions;
         public Rect nodePosition;
+        public int badScore;
+        public int goodScore;
         public AudioClip soundEffect;
         public AudioClip backgroundMusic;
+        
 
         public NodeData()
         {
