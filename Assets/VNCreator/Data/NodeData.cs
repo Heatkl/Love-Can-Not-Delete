@@ -11,6 +11,7 @@ namespace VNCreator
         public Sprite characterSpr;
         public string characterName;
         public string dialogueText;
+        public string anyText;
         public Sprite backgroundSpr;
         public bool startNode;
         public bool endNode;

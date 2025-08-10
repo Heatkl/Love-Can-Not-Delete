@@ -72,6 +72,8 @@ namespace VNCreator
                 }
             );
 
+            
+
             ObjectField sfxField = this.Query<ObjectField>("Sound_Field").First();
             sfxField.objectType = typeof(AudioClip);
             sfxField.value = node.nodeData.soundEffect;
